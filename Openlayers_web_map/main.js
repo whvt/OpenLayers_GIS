@@ -64,7 +64,7 @@ function init(){
 
   map.addInteraction(dragRotateInteraction)
 
-  /* const drawInteraction = new ol.interaction.Draw({
+  const drawInteraction = new ol.interaction.Draw({
     type: 'Polygon',
     freehand: true
   })
@@ -74,7 +74,7 @@ function init(){
     let parser = new ol.format.GeoJSON();
     let drawnFeatures = parser.writeFeatures([e.feature]);
     console.log(drawnFeatures);
-  }) */
+  })
 }
 
 
