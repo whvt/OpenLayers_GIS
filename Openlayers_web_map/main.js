@@ -1,8 +1,7 @@
 window.onload = init;
 
 function init(){
-  // Controls
-  const fullScreenControl = new ol.control.FullScreen();
+  // Controls  
   const mousePositionControl = new ol.control.MousePosition();
   const overViewMapControl = new ol.control.OverviewMap({
     collapsed: false,
@@ -31,8 +30,7 @@ function init(){
     ],
     target: 'js-map',
     keyboardEventTarget: document,
-    controls: ol.control.defaults().extend([
-      fullScreenControl,
+    controls: ol.control.defaults().extend([      
       mousePositionControl,
       overViewMapControl,
       scaleLineControl,
@@ -64,7 +62,7 @@ function init(){
 
   map.addInteraction(dragRotateInteraction)
 
-  const drawInteraction = new ol.interaction.Draw({
+  /* const drawInteraction = new ol.interaction.Draw({
     type: 'Polygon',
     freehand: true
   })
@@ -74,7 +72,7 @@ function init(){
     let parser = new ol.format.GeoJSON();
     let drawnFeatures = parser.writeFeatures([e.feature]);
     console.log(drawnFeatures);
-  })
+  }) */
 }
 
 
